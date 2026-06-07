@@ -1,0 +1,29 @@
+/**
+ * Testimonials / recommendations.
+ * TODO: Dixit will add real recommendation text from his manager / team lead.
+ * Until `quote` is filled in, cards render as on-brand "coming soon" placeholders.
+ */
+
+export type Testimonial = {
+  quote: string | null; // null => renders as placeholder
+  name: string;
+  title: string;
+  relation: string;
+};
+
+export const testimonials: Testimonial[] = [
+  {
+    // TODO: add quote from manager
+    quote: null,
+    name: "—",
+    title: "Engineering Manager",
+    relation: "Thinkbiz Technology",
+  },
+  {
+    // TODO: add quote from team lead
+    quote: null,
+    name: "—",
+    title: "Team Lead",
+    relation: "Thinkbiz Technology",
+  },
+];
