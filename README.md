@@ -155,8 +155,23 @@ public/                 Static assets (resume PDF, favicon)
 - Semantic HTML throughout, ARIA labels on icon-only controls, visible focus
   rings, keyboard-navigable modal (Radix Dialog), and a full
   `prefers-reduced-motion` story.
-- The contact form opens the visitor's mail client via `mailto:` (no backend).
-  To capture submissions server-side, swap `handleSubmit` in
-  `components/sections/contact/contact.tsx` for a form endpoint (Resend / Formspree).
+## Contact form
+
+The "Get in touch" form POSTs to a server route ([app/api/contact/route.ts](app/api/contact/route.ts))
+that emails the enquiry to your inbox via [Resend](https://resend.com), then
+shows a thank-you message. To enable it:
+
+1. Sign up at [resend.com](https://resend.com) with the inbox you want enquiries
+   to reach (e.g. `djayswal023@gmail.com`).
+2. Create an API key and set `RESEND_API_KEY` (and optionally `CONTACT_TO_EMAIL`
+   / `CONTACT_FROM_EMAIL`) — see `.env.example`. Add the same vars in Vercel.
+3. Until you verify your own domain in Resend, the default sender
+   `onboarding@resend.dev` delivers to your Resend account email. After verifying
+   a domain, set `CONTACT_FROM_EMAIL` to an address on it.
+
+Enquiries arrive with the subject **"Website Enquiry — {name}"** and the
+sender's address set as reply-to, so you can reply directly. Without
+`RESEND_API_KEY` set, the form returns a friendly error pointing visitors to
+your email address.
 
 Built with Next.js + [claude.ai/code](https://claude.ai/code).

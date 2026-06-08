@@ -20,9 +20,9 @@ export const site = {
   email: "djayswal023@gmail.com",
   // Drop your resume PDF in /public and keep this path in sync.
   resumePath: "/dixit-jayswal-resume.pdf",
-  // Reads NEXT_PUBLIC_SITE_URL in production (set it in Vercel), else falls
-  // back to the placeholder below. TODO: update the fallback once live.
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://dixitjayswal.dev",
+  // Canonical site URL. Reads NEXT_PUBLIC_SITE_URL in production (set it in
+  // Vercel); the fallback is the live domain. No trailing slash.
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://smartdixit.online",
   socials: {
     linkedin: "https://linkedin.com/in/dixit-jayswal",
     // TODO: add GitHub URL once the profile is created.

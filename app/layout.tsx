@@ -35,6 +35,9 @@ export const metadata: Metadata = {
     template: `%s — ${site.name}`,
   },
   description: site.hero.subHeadline,
+  alternates: {
+    canonical: "/",
+  },
   keywords: [
     "Backend Engineer",
     "Distributed Systems",
