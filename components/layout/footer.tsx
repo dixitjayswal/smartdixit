@@ -24,15 +24,6 @@ export function Footer() {
               className="text-muted-strong transition-colors hover:text-accent"
             >
               Next.js
-            </a>{" "}
-            +{" "}
-            <a
-              href="https://claude.ai/code"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-strong transition-colors hover:text-accent"
-            >
-              claude.ai/code
             </a>
           </p>
         </div>
