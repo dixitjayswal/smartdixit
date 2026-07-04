@@ -1,6 +1,6 @@
 # Dixit Jayswal — Portfolio
 
-Personal portfolio for a Senior Full Stack Developer specializing in backend
+Personal portfolio for a Senior Software Engineer specializing in backend
 engineering, distributed systems, and real-time streaming. Dark-first,
 animation-heavy, built to send to recruiters.
 
@@ -31,10 +31,10 @@ These are the placeholders to replace (all marked with `// TODO:` in code):
 
 | What | Where |
 | --- | --- |
-| **Resume PDF** | Drop your file in `public/` and set `resumePath` in `content/site.ts` (default expects `public/dixit-jayswal-resume.pdf`). |
+| **Resume PDF** | Lives in `public/` — `resumePath` in `content/site.ts` points to `public/Dixit_Jayswal_Senior_Software_Engineer.pdf`. Replace the file (keep the name) or update the path to swap it. |
 | **GitHub URL** | `content/site.ts` → `socials.github`. |
 | **Live domain** | Set `NEXT_PUBLIC_SITE_URL` in Vercel (see `.env.example`), and update the fallback in `content/site.ts`. |
-| **Testimonials** | `content/testimonials.ts` — set each `quote` (and name/title) to render real cards instead of "coming soon" placeholders. |
+| **Testimonials** | `content/testimonials.ts` — set each `quote` (and name/title). The section stays hidden until at least one quote is filled in. |
 | **Profile photo** | Optional. Add to `public/` and wire into the About aside if you want it. |
 | **Favicon** | Replace `app/favicon.ico` with your own. |
 
@@ -162,7 +162,7 @@ that emails the enquiry to your inbox via [Resend](https://resend.com), then
 shows a thank-you message. To enable it:
 
 1. Sign up at [resend.com](https://resend.com) with the inbox you want enquiries
-   to reach (e.g. `djayswal023@gmail.com`).
+   to reach (e.g. `djayswal012@gmail.com`).
 2. Create an API key and set `RESEND_API_KEY` (and optionally `CONTACT_TO_EMAIL`
    / `CONTACT_FROM_EMAIL`) — see `.env.example`. Add the same vars in Vercel.
 3. Until you verify your own domain in Resend, the default sender

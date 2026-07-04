@@ -25,6 +25,43 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: "lms-ips",
+    title: "LMS",
+    subtitle: "Indoor Positioning for a Location Management System",
+    role: "Architecting the Indoor Positioning System (IPS) module",
+    year: "2026",
+    summary:
+      "Enterprise indoor-positioning platform — sub-room accuracy from BLE, Wi-Fi RTT, and geomagnetic signals.",
+    outcome:
+      "Ongoing. Led technical discovery and vendor evaluation across positioning platforms — accuracy, SDK effort, and TCO — and shipped an interactive floor-map editor.",
+    highlights: [
+      "Evaluating BLE beacons, Wi-Fi RTT, and geomagnetic fingerprinting for sub-room accuracy",
+      "Interactive floor-map editor with React-Konva — zones, beacon placement, live position overlay",
+      "Led vendor evaluation and technical discovery for third-party positioning platforms",
+    ],
+    stack: ["React", "React-Konva", "TypeScript", "Node.js", "BLE", "Wi-Fi RTT"],
+    accent: "violet",
+    codeSnippet: {
+      language: "typescript",
+      filename: "position-fuser.ts",
+      code: `// Fuse beacon + fingerprint estimates into one position
+export function fusePosition(readings: SignalReading[]) {
+  const candidates = [
+    trilaterate(readings.filter(isBeacon)),
+    matchFingerprint(readings.filter(isGeomagnetic)),
+  ].filter(Boolean);
+
+  // Weight each estimate by its confidence, then blend
+  const weighted = candidates.map((c) => ({
+    point: c.point,
+    weight: c.confidence / sum(candidates, "confidence"),
+  }));
+
+  return blend(weighted); // sub-room accuracy target
+}`,
+    },
+  },
+  {
     id: "j-vis",
     title: "J-VIS",
     subtitle: "JERA Vision Intelligence System",
@@ -34,12 +71,12 @@ export const projects: Project[] = [
     summary:
       "Enterprise anomaly-detection platform for one of Japan's largest power companies.",
     outcome:
-      "Delivered to production for JERA. Resolved a critical pre-prod bug with a feature flag + dual-database strategy in under 2 hours.",
+      "Delivered to production for JERA. Resolved a critical pre-prod dual-database flag mismatch in 90 minutes, protecting the client release timeline.",
     highlights: [
       "Led the Detailed System Design and owned backend implementation end to end",
       "Event-driven ingestion on AWS SQS + Lambda, persisted to DynamoDB and Snowflake",
       "Role-based access control (RBAC) across an EKS-hosted service mesh",
-      "Shipped a flag + dual-database fix for a critical pre-prod defect in <2 hours",
+      "Shipped a flag + dual-database fix for a critical pre-prod defect in 90 minutes",
     ],
     stack: [
       "AWS SQS",

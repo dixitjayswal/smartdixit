@@ -15,6 +15,7 @@ export function PersonJsonLd() {
     description: site.hero.subHeadline,
     url: site.url,
     email: site.email,
+    telephone: site.phone,
     address: {
       "@type": "PostalAddress",
       addressLocality: "Vadodara",

@@ -15,12 +15,20 @@ export type TimelineEntry = {
 export const timeline: TimelineEntry[] = [
   {
     kind: "work",
-    role: "Sr. Full Stack Developer",
+    role: "Senior Software Engineer",
     org: "Thinkbiz Technology",
-    period: "May 2025 — Present",
+    period: "Jun 2026 — Present",
     current: true,
     detail:
-      "Architecting AWS event pipelines and leading detailed system design for enterprise clients including JERA (Japan).",
+      "Architecting an Indoor Positioning System for an enterprise Location Management System — evaluating BLE, Wi-Fi RTT, and geomagnetic approaches, and leading vendor discovery.",
+  },
+  {
+    kind: "work",
+    role: "Sr. Full Stack Developer",
+    org: "Thinkbiz Technology",
+    period: "May 2025 — Jun 2026",
+    detail:
+      "Architected AWS event pipelines and led detailed system design for enterprise clients including JERA (Japan).",
   },
   {
     kind: "work",

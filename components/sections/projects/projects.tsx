@@ -56,7 +56,7 @@ export function Projects() {
         <div className="mx-auto max-w-5xl">
           <SectionHeading
             eyebrow="Projects"
-            title="Four systems built to stay up under load."
+            title="Five systems built to stay up under load."
           />
         </div>
       </div>
@@ -71,7 +71,7 @@ export function Projects() {
           <div className="mx-auto max-w-5xl">
             <SectionHeading
               eyebrow="Projects"
-              title="Four systems built to stay up under load."
+              title="Five systems built to stay up under load."
             />
           </div>
         </div>

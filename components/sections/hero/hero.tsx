@@ -9,7 +9,7 @@ import {
   useMotionTemplate,
 } from "framer-motion";
 import { useTheme } from "@/components/providers/theme-provider";
-import { ArrowDown, ArrowUpRight } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Download } from "lucide-react";
 import { GradientMesh } from "./gradient-mesh";
 import { LazyHeroScene } from "./scene/lazy-scene";
 import { NameReveal } from "./name-reveal";
@@ -174,6 +174,14 @@ export function Hero() {
               <a href="#contact">
                 Get in Touch
                 <ArrowUpRight size={16} />
+              </a>
+            </Button>
+          </Magnetic>
+          <Magnetic>
+            <Button asChild size="lg" variant="outline">
+              <a href={site.resumePath} download>
+                Resume
+                <Download size={16} />
               </a>
             </Button>
           </Magnetic>

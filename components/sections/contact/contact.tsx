@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, MapPin, ArrowUpRight, Download, Check } from "lucide-react";
+import { Mail, MapPin, Phone, ArrowUpRight, Download, Check } from "lucide-react";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Button } from "@/components/ui/button";
 import { Magnetic } from "@/components/ui/magnetic";
@@ -72,6 +72,18 @@ export function Contact() {
               </span>
               <AnimatedLink href={site.socials.email} data-cursor="hover">
                 {site.email}
+              </AnimatedLink>
+            </div>
+
+            <div className="group flex items-center gap-3 text-lg text-foreground">
+              <span className="grid h-10 w-10 place-items-center rounded-full border border-border text-accent transition-colors group-hover:border-accent">
+                <Phone size={18} />
+              </span>
+              <AnimatedLink
+                href={`tel:${site.phone.replace(/\s/g, "")}`}
+                data-cursor="hover"
+              >
+                {site.phone}
               </AnimatedLink>
             </div>
 

@@ -39,6 +39,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   keywords: [
+    "Senior Software Engineer",
     "Backend Engineer",
     "Distributed Systems",
     "Apache Kafka",

@@ -1,11 +1,12 @@
 /**
  * Testimonials / recommendations.
  * TODO: Dixit will add real recommendation text from his manager / team lead.
- * Until `quote` is filled in, cards render as on-brand "coming soon" placeholders.
+ * Entries with `quote: null` are skipped; the whole section stays hidden
+ * until at least one quote is filled in.
  */
 
 export type Testimonial = {
-  quote: string | null; // null => renders as placeholder
+  quote: string | null; // null => hidden
   name: string;
   title: string;
   relation: string;
