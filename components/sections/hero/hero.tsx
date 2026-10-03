@@ -196,8 +196,7 @@ export function Hero() {
         >
           <p className="text-sm text-muted">
             Shipping production systems for{" "}
-            <span className="text-shimmer font-medium">JERA</span>
-            <span className="text-muted/70"> (one of Japan&apos;s largest power companies)</span>{" "}
+            <span className="text-shimmer font-medium">global enterprise clients</span>{" "}
             at Thinkbiz Technology.
           </p>
           <SocialLinks />

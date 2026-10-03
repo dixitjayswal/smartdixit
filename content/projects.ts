@@ -62,16 +62,16 @@ export function fusePosition(readings: SignalReading[]) {
     },
   },
   {
-    id: "j-vis",
-    title: "J-VIS",
-    subtitle: "JERA Vision Intelligence System",
-    client: "JERA (Japan)",
+    id: "vis",
+    title: "VIS",
+    subtitle: "Vision Intelligence System",
+    client: "Enterprise energy client",
     role: "Led Detailed System Design (DSD) + backend implementation",
     year: "2025",
     summary:
-      "Enterprise anomaly-detection platform for one of Japan's largest power companies.",
+      "Enterprise anomaly-detection platform for a large client in the energy sector.",
     outcome:
-      "Delivered to production for JERA. Resolved a critical pre-prod dual-database flag mismatch in 90 minutes, protecting the client release timeline.",
+      "Delivered to production for an enterprise energy client. Resolved a critical pre-prod dual-database flag mismatch in 90 minutes, protecting the client release timeline.",
     highlights: [
       "Led the Detailed System Design and owned backend implementation end to end",
       "Event-driven ingestion on AWS SQS + Lambda, persisted to DynamoDB and Snowflake",
@@ -185,19 +185,19 @@ async function escalate(incident: Incident) {
     },
   },
   {
-    id: "jera-stoppage",
-    title: "JERA Stoppage Management",
+    id: "stoppage-management",
+    title: "Stoppage Management",
     subtitle: "Near-real-time anomaly detection",
-    client: "JERA (Japan)",
+    client: "Enterprise energy client",
     year: "2024",
     summary:
       "Near-real-time stoppage detection with a redesigned operator UI, delivered across timezones.",
     outcome:
-      "Near-real-time anomaly detection. Cross-timezone delivery with Japanese stakeholders and a redesigned operator UI.",
+      "Near-real-time anomaly detection. Cross-timezone delivery with international client stakeholders and a redesigned operator UI.",
     highlights: [
       "Streaming ingestion through Azure Event Hub for near-real-time detection",
       "Redesigned the operator UI for faster situational awareness",
-      "Coordinated delivery directly with Japanese stakeholders across timezones",
+      "Coordinated delivery directly with client stakeholders across timezones",
     ],
     stack: ["Azure Event Hub", "Node.js", "Vue.js"],
     accent: "violet",

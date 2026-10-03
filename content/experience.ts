@@ -28,7 +28,7 @@ export const timeline: TimelineEntry[] = [
     org: "Thinkbiz Technology",
     period: "May 2025 — Jun 2026",
     detail:
-      "Architected AWS event pipelines and led detailed system design for enterprise clients including JERA (Japan).",
+      "Architected AWS event pipelines and led detailed system design for global enterprise clients in the energy sector.",
   },
   {
     kind: "work",
